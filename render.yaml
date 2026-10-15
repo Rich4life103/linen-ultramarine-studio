@@ -10,7 +10,9 @@ services:
     runtime: node
     plan: free
     rootDir: server
-    buildCommand: npm install
+    # The verify step fails the build loudly if the native better-sqlite3 binding
+    # was not built/downloaded by the install script, instead of failing at runtime.
+    buildCommand: npm install && npm run verify
     startCommand: npm start
     healthCheckPath: /api/health
     envVars:

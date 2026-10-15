@@ -47,7 +47,15 @@ publicly reachable.
 ### Redeploying
 
 - **Frontend**: `cd client && vercel --prod`
-- **API**: push to `main` — Render deploys automatically (or trigger from the dashboard)
+- **API**: push to `main`, then trigger a deploy — either from the Render dashboard
+  (*Manual Deploy → Deploy latest commit*) or via the API:
+  `POST https://api.render.com/v1/services/<serviceId>/deploys`
+
+> **Auto-deploy note**: the service was created through the API with
+> `autoDeployTrigger: commit`, but push-triggered webhooks additionally require the Render
+> GitHub App to be installed on the repository. Install it from
+> <https://github.com/apps/render/installations/new> (or Render Dashboard → *Connect GitHub*)
+> to get deploys on every push. Until then, trigger deploys manually as above.
 
 ---
 

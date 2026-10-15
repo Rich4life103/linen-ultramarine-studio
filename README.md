@@ -10,6 +10,19 @@ designs/  Original Stitch design references (DESIGN.md + reference HTML/screens)
 docs/     Deployment guide + captured screenshots
 ```
 
+## Live deployment
+
+| Component | Host | URL |
+| --- | --- | --- |
+| Portfolio + Studio | Vercel | <https://linen-ultramarine.vercel.app> |
+| REST API | Render | <https://linen-ultramarine-api.onrender.com/api/health> |
+| Source | GitHub | <https://github.com/Rich4life103/linen-ultramarine-studio> |
+
+Studio sign-in: `elena@elenavance.design` / `studio2024`.
+
+> The API runs on Render's **free** instance type, which has no persistent disk — the SQLite
+> database re-seeds on each restart. See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md#persistence-on-the-free-tier).
+
 ## Quick start
 
 ```bash

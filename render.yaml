@@ -1,0 +1,36 @@
+# Render Blueprint — deploys the Express + SQLite API
+#
+# Free tier works immediately but has an EPHEMERAL filesystem: the SQLite database and
+# uploads survive while the instance runs, then reset on the next restart/deploy (the app
+# simply re-seeds itself on boot). For true persistence, switch `plan` to `starter` and
+# uncomment the `disk:` block below — DATA_DIR/UPLOAD_DIR already point at the mount.
+services:
+  - type: web
+    name: linen-ultramarine-api
+    runtime: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: "22"
+      # Signs session cookies — generated once and kept secret
+      - key: JWT_SECRET
+        generateValue: true
+      # Comma-separated list of allowed browser origins.
+      # Set this to your Vercel URL, e.g. https://linen-ultramarine.vercel.app
+      - key: CORS_ORIGIN
+        sync: false
+      # Where the SQLite file and uploads live. Point both at the mounted disk to persist.
+      # - key: DATA_DIR
+      #   value: /var/data
+      # - key: UPLOAD_DIR
+      #   value: /var/data/uploads
+    # disk:
+    #   name: studio-storage
+    #   mountPath: /var/data
+    #   sizeGB: 1

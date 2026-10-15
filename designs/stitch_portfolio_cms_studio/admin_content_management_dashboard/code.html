@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'surface-container-high': '#e9e7ec', 'on-tertiary': '#ffffff', 'on-error': '#ffffff', 'on-primary-fixed-variant': '#0039b5', 'inverse-primary': '#b7c4ff', 'error': '#ba1a1a', 'inverse-on-surface': '#f2f0f4', 'on-tertiary-fixed-variant': '#6e3900', 'primary-fixed-dim': '#b7c4ff', 'surface-tint': '#2151da', 'on-secondary-fixed-variant': '#822714', 'on-primary-fixed': '#001551', 'primary-fixed': '#dce1ff', 'on-surface-variant': '#434655', 'surface-container-lowest': '#ffffff', 'outline-variant': '#c4c5d7', 'secondary-fixed': '#ffdad2', 'on-tertiary-fixed': '#2f1500', 'tertiary-fixed': '#ffdcc3', 'on-error-container': '#93000a', 'tertiary-fixed-dim': '#ffb77d', 'primary': '#0037b0', 'on-background': '#1b1b1f', 'background': '#faf9fd', 'secondary-fixed-dim': '#ffb4a3', 'on-primary-container': '#cad3ff', 'surface-variant': '#e3e2e6', 'secondary': '#a13e28', 'on-secondary': '#ffffff', 'tertiary': '#6b3700', 'on-secondary-fixed': '#3d0600', 'inverse-surface': '#2f3034', 'surface-dim': '#dbd9dd', 'on-secondary-container': '#721c09', 'tertiary-container': '#8d4b00', 'on-tertiary-container': '#ffcba3', 'outline': '#747686', 'error-container': '#ffdad6', 'surface-container-low': '#f5f3f7', 'surface-container': '#efedf1', 'surface-bright': '#faf9fd', 'primary-container': '#1d4ed8', 'surface': '#faf9fd', 'on-primary': '#ffffff', 'secondary-container': '#fd8367', 'surface-container-highest': '#e3e2e6', 'on-surface': '#1b1b1f' }, borderRadius: { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, spacing: { 'space-3xl': '6rem', 'space-xl': '2.5rem', 'space-lg': '1.5rem', 'gutter-desktop': '2.5rem', 'space-sm': '0.5rem', 'margin-tablet': '2.5rem', 'space-xs': '0.25rem', 'margin': '1.25rem', 'space-2xl': '4rem', 'space-md': '1rem', 'margin-desktop': '4rem', 'gutter': '1.5rem' }, fontFamily: { 'display-hero': ['Newsreader'], 'body-md': ['Plus Jakarta Sans'], 'headline-md': ['Newsreader'], 'body-lg': ['Plus Jakarta Sans'], 'display-hero-mobile': ['Newsreader'], 'body-sm': ['Plus Jakarta Sans'], 'headline-lg': ['Newsreader'], 'code-xs': ['JetBrains Mono'], 'headline-md-mobile': ['Newsreader'], 'label-sm': ['Plus Jakarta Sans'], 'headline-lg-mobile': ['Newsreader'], 'label-md': ['Plus Jakarta Sans'], 'headline-sm': ['Newsreader'], 'code-sm': ['JetBrains Mono'] }, fontSize: { 'display-hero': ['4.5rem', { lineHeight: '5rem', letterSpacing: '-0.025em', fontWeight: '400' }], 'body-md': ['1rem', { lineHeight: '1.625rem', fontWeight: '400' }], 'headline-md': ['2rem', { lineHeight: '2.5rem', letterSpacing: '-0.015em', fontWeight: '400' }], 'body-lg': ['1.125rem', { lineHeight: '1.75rem', fontWeight: '400' }], 'display-hero-mobile': ['2.75rem', { lineHeight: '3.25rem', letterSpacing: '-0.02em', fontWeight: '400' }], 'body-sm': ['0.875rem', { lineHeight: '1.375rem', fontWeight: '400' }], 'headline-lg': ['2.75rem', { lineHeight: '3.25rem', letterSpacing: '-0.02em', fontWeight: '400' }], 'code-xs': ['0.6875rem', { lineHeight: '0.875rem', letterSpacing: '0.06em', fontWeight: '500' }], 'headline-md-mobile': ['1.5rem', { lineHeight: '2rem', letterSpacing: '-0.01em', fontWeight: '500' }], 'label-sm': ['0.75rem', { lineHeight: '1rem', letterSpacing: '0.02em', fontWeight: '600' }], 'headline-lg-mobile': ['2rem', { lineHeight: '2.5rem', letterSpacing: '-0.015em', fontWeight: '400' }], 'label-md': ['0.875rem', { lineHeight: '1.25rem', letterSpacing: '0.01em', fontWeight: '600' }], 'headline-sm': ['1.375rem', { lineHeight: '1.875rem', letterSpacing: '-0.01em', fontWeight: '500' }], 'code-sm': ['0.75rem', { lineHeight: '1rem', letterSpacing: '0.04em', fontWeight: '500' }] } } } };</script><style>@layer base { html, body { min-height: 100%; margin: 0; padding: 0; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface flex flex-col min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Elena Vance Monogram Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XpynGCkTaFnbid0m0WpkE2mjfFiizBHk00VA-efovvl3W91MVdhotkPRPLSaUBNRfB3QyBrnEb6OSs5l9CIn9SEoA2czMX68y8B6G1KdvEOON6TaGrNRKdKG0C8FjFCQL-eJDqSMSb_5B9jwGYSU2d6n4J_85q2Mfwmo4OC6wiaI-H_LsNEog4seqHgGur-7YhruQ0_BAI2AwUD4I_CC6ZR1orfdAaot5fxTTrT1GnyVXeNrdf92Jbru4"/><div class="flex flex-col truncate"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface truncate">Elena Vance</span><span class="font-code-xs text-code-xs text-on-surface-variant truncate uppercase tracking-wider">Design Technologist</span></div></div><div class="flex items-center gap-space-xs shrink-0"><div class="hidden xs:inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-code-xs text-code-xs"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span><span>Q3 Open</span></div><span class="text-xs font-label-sm text-on-surface-variant hidden">Content Management Dashboard</span><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0 ring-1 ring-surface-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt35oXoPWrV4OP0j94YuxI-lhX5zvkUiJkCdsdqY0qJ-E1-h9CY4UlFBRfWDZ29Od__nJtt3tbxUvZgeH--DCmh2xtK2LhKzY8L5T6KRjr5Hi8iPY36Eh57t6LB9t4ADBPj2fG_dBdMywONEOMg0IetSw-llHhA_qFBBTJUCzJQc0Hvh32k2gSjFFRHgWA1iFBB351vOeX0bvt-zZTnjRcQl1Jcfnjsfrbx3ePugZuoYvzUwMZM4RW"/></div></div></header><main class="flex-1 w-full pt-16 pb-28 bg-surface"><div class="flex flex-col w-full pb-16">
+<!-- Top Global Workspace Controller -->
+<section class="px-margin pt-space-md pb-space-sm flex flex-col gap-space-sm">
+<!-- Production Deployment Status Banner -->
+<div class="flex items-center justify-between px-space-md py-2.5 rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">verified</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant truncate">
+          Live sync: Today at 09:42 EST — Production v3.8
+        </span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high shrink-0">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-ping"></span>
+<span class="font-code-xs text-code-xs text-on-secondary-container">v3.9 Staged</span>
+</div>
+</div>
+<!-- Live Control & Global Publication Hub -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm p-space-md rounded-xl bg-surface-container shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-3 h-3 rounded-full bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.6)]"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">3 Unsaved Modifications</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Staged across Kinetix OS &amp; Skills</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex-1 sm:flex-initial h-10 px-3.5 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container-high transition-all flex items-center justify-center gap-1.5 font-label-md text-label-md active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span>Preview Live</span>
+</button>
+<button class="flex-1 sm:flex-initial h-10 px-4 rounded-lg bg-primary-container text-on-primary shadow-md hover:bg-primary transition-all flex items-center justify-center gap-1.5 font-label-md text-label-md active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px]">cloud_upload</span>
+<span>Publish All</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Studio Section Navigation Tabs -->
+<nav aria-label="Studio Sections" class="w-full px-margin py-space-xs overflow-x-auto no-scrollbar flex items-center gap-2">
+<button class="h-9 px-4 rounded-full bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm shrink-0 shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">folder_special</span>
+<span>Projects (4)</span>
+</button>
+<button class="h-9 px-4 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm shrink-0 hover:text-on-surface transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">person</span>
+<span>Bio &amp; Intro</span>
+</button>
+<button class="h-9 px-4 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm shrink-0 hover:text-on-surface transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">hub</span>
+<span>Skills Matrix</span>
+</button>
+<button class="h-9 px-4 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm shrink-0 hover:text-on-surface transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">format_quote</span>
+<span>Testimonials</span>
+</button>
+<button class="h-9 px-4 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm shrink-0 hover:text-on-surface transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">description</span>
+<span>Résumé PDF</span>
+</button>
+</nav>
+<!-- Main Case Studies Manager -->
+<section class="px-margin mt-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-on-surface">Manage Case Studies</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high font-code-xs text-code-xs text-on-surface-variant">4 total</span>
+</div>
+<button class="h-9 px-3.5 rounded-lg bg-surface-container-lowest text-primary shadow-sm hover:bg-primary-fixed transition-all flex items-center gap-1 font-label-sm text-label-sm active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>New Project</span>
+</button>
+</div>
+<!-- Projects Stack -->
+<div class="flex flex-col gap-space-xs mt-1" id="projectList">
+<!-- Item 1: Kinetix OS (Active Editing Focus) -->
+<article class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm transition-all">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-3 min-w-0">
+<button aria-label="Reorder Project Kinetix OS" class="touch-manipulation text-on-surface-variant p-1 -ml-1 hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[20px]">drag_indicator</span>
+</button>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface truncate">Kinetix OS</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-code-xs text-code-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                  Published
+                </span>
+</div>
+<span class="font-code-xs text-code-xs text-on-surface-variant truncate">vance.design/kinetix • Updated 2h ago</span>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<!-- Visibility switch -->
+<button aria-checked="true" aria-label="Toggle Public Visibility for Kinetix OS" class="w-10 h-6 bg-primary-container rounded-full relative p-0.5 transition-colors focus:outline-none" role="switch" type="button">
+<span class="block w-5 h-5 bg-on-primary rounded-full transform translate-x-4 shadow-sm transition-transform"></span>
+</button>
+<button aria-label="Collapse Editor" class="w-9 h-9 rounded-lg bg-surface-container text-primary flex items-center justify-center ml-1" type="button">
+<span class="material-symbols-outlined text-[20px]">expand_less</span>
+</button>
+</div>
+</div>
+<!-- Inline Quick Editor / Staging Studio Container -->
+<div class="mt-space-xs p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">tune</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Inspector &amp; Live Formatter</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-code-xs text-code-xs text-on-surface-variant">Live Split Preview</span>
+<button aria-checked="true" aria-label="Toggle visual staging mirror" class="w-8 h-5 bg-surface-tint rounded-full relative p-0.5" role="switch" type="button">
+<span class="block w-4 h-4 bg-on-primary rounded-full transform translate-x-3 shadow-xs"></span>
+</button>
+</div>
+</div>
+<!-- Basic Metadata Fields -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="p1-title">Project Header</label>
+<input class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none shadow-xs" id="p1-title" type="text" value="Kinetix OS — Autonomous Logistics Surface"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="p1-client">Client &amp; Ecosystem</label>
+<input class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none shadow-xs" id="p1-client" type="text" value="Kinetix Robotics Inc. / DARPA Systems"/>
+</div>
+<div class="flex flex-col gap-1 sm:col-span-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="p1-tagline">Editorial Synopsis</label>
+<textarea class="p-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none shadow-xs resize-none" id="p1-tagline" rows="2">Architecting a unified multisensory control paradigm for automated freight logistics and mission-critical tele-operation displays.</textarea>
+</div>
+</div>
+<!-- Quantifiable Impact Metrics Inputs -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Key Metric Anchors</span>
+<button class="font-code-xs text-code-xs text-primary flex items-center gap-1" type="button">+ Add Metric</button>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col gap-1 shadow-xs">
+<span class="font-code-xs text-code-xs text-on-surface-variant uppercase">Metric 01</span>
+<input class="font-label-md text-label-md text-primary bg-transparent focus:outline-none" type="text" value="+42% Task Speed"/>
+<input class="font-body-sm text-body-sm text-on-surface-variant bg-transparent focus:outline-none" type="text" value="Dispatch latency reduction"/>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col gap-1 shadow-xs">
+<span class="font-code-xs text-code-xs text-on-surface-variant uppercase">Metric 02</span>
+<input class="font-label-md text-label-md text-primary bg-transparent focus:outline-none" type="text" value="99.8% System Adoption"/>
+<input class="font-body-sm text-body-sm text-on-surface-variant bg-transparent focus:outline-none" type="text" value="Operator compliance index"/>
+</div>
+</div>
+</div>
+<!-- Media Assets Drag Well -->
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Hero Specimen Media</span>
+<div class="relative rounded-lg overflow-hidden bg-surface-container-highest flex flex-col gap-2">
+<img class="w-full h-44 object-cover" data-alt="Dark industrial interface displaying telemetry nodes and spatial robotics coordinates rendered in clean cobalt and slate tones for Kinetix OS." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx6K31vRAOUBXTOKYCV3DlVSAwI5dkBDrEjNXaEenQdazChOb1-al0bBnOfR5DxH5e9_BG3cndQ9gbhPyigDtlEpS5Th1JO8N-njfXLA45ujoLOcoG3VD9mvhaCw1gb3nhASdCcF7VGkMeh2lnWMK5RoR_6gUEqtl6Zp02KL5cyDxGCwbzNhU9aQEmrgFqbjsEOrJcFUWCKfXI0y2BC-0kqAS79qzIaxNIobPhsCIhytHfsHTqvytE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent flex items-end justify-between p-space-sm">
+<div class="flex items-center gap-1.5 text-on-primary font-code-xs text-code-xs">
+<span class="material-symbols-outlined text-[16px]">image</span>
+<span>hero_kinetix_telemetry_2024.webp • 1.4 MB</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="h-8 px-2.5 rounded bg-surface-container-lowest/90 text-on-surface font-label-sm text-label-sm hover:bg-surface-container-lowest shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">crop</span>
+<span>Crop</span>
+</button>
+<button class="h-8 px-2.5 rounded bg-surface-tint text-on-primary font-label-sm text-label-sm hover:bg-primary shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">cached</span>
+<span>Replace</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Item 2: Aura Finance -->
+<article class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between gap-space-sm hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<button aria-label="Reorder Project Aura Finance" class="touch-manipulation text-on-surface-variant p-1 -ml-1 hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[20px]">drag_indicator</span>
+</button>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Monochrome geometric financial dashboard displaying algorithmic yield graphs and currency indexes with elegant typographic layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZR1J0w8tQa78dTM1t9mzlxzLx_7BQ6_IJ6e80y5pwtKr3GzR-GcApyk3idF-gFfyPQUwgP5EWdRxSJS72ieMf5bn8a0jAmYsf9IGRE7eFLKXflXPL_b3Z0WIiGfUkYrUpnG_rTw6IrQBPBLXJ7Rmw2ZJ4sWy2h5jca-xdVjQ7-_vLppk8mP6X1vR1YfVEsGYF18NYt00q2MFB0qByvAL-zX-a_mccHQZ6sXA9mXQA9shS0OWfhgzZ"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface truncate">Aura Finance</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-code-xs text-code-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                Published
+              </span>
+</div>
+<span class="font-code-xs text-code-xs text-on-surface-variant truncate">Institutional asset allocation protocol</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="h-8 px-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span class="hidden sm:inline">Edit</span>
+</button>
+<button aria-checked="true" aria-label="Toggle Public Visibility for Aura Finance" class="w-10 h-6 bg-primary-container rounded-full relative p-0.5 transition-colors" role="switch" type="button">
+<span class="block w-5 h-5 bg-on-primary rounded-full transform translate-x-4 shadow-sm"></span>
+</button>
+</div>
+</article>
+<!-- Item 3: Prism Design Tokens -->
+<article class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between gap-space-sm hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<button aria-label="Reorder Project Prism Design Tokens" class="touch-manipulation text-on-surface-variant p-1 -ml-1 hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[20px]">drag_indicator</span>
+</button>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close up architectural typography specimen sheets showing structured hex codes, color ramps, and design system variables." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAszvpYGUG8ps0W2eIW3u7EcfE5-tPiNrRsPt0ugyEHuC--2SJa1IwfIbSGzKSDpgauefcMZ1jc5-Wdq5QGylEpi8jvZegV_gcqcNs2qYYRCX0z7Drg2h5EszFoQvzn750aTV_o1y0t1k8tIv9rwXTtdqIQKIopFjJPwZyq9Oj0eUMWxyfRq9JTktixL-yoJZziTFqI3PxisRCfvONo4W4bIEJ3SpNaYuZ84c1pZPGhLQvECKMEf1Ur"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface truncate">Prism Design Tokens</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-code-xs text-code-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+                Draft
+              </span>
+</div>
+<span class="font-code-xs text-code-xs text-on-surface-variant truncate">Multi-brand design engine architecture</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="h-8 px-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span class="hidden sm:inline">Edit</span>
+</button>
+<button aria-checked="false" aria-label="Toggle Public Visibility for Prism Design Tokens" class="w-10 h-6 bg-surface-container-high rounded-full relative p-0.5 transition-colors" role="switch" type="button">
+<span class="block w-5 h-5 bg-on-primary rounded-full shadow-sm"></span>
+</button>
+</div>
+</article>
+<!-- Item 4: Spatial Audio Experiments (Destructive flow context) -->
+<article class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between gap-space-sm hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<button aria-label="Reorder Project Spatial Audio Experiments" class="touch-manipulation text-on-surface-variant p-1 -ml-1 hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[20px]">drag_indicator</span>
+</button>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Sound wave frequency spectrogram with translucent waveform contours and parametric equalizer curves on a slate background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-7nFtB8bt-Poll8lqbfqMvK1QTq5QNECkco8YaIiQIhgjv-p4awNLoYnbToIJafBHAYby6x4vIhI7v3GgN5kqYIb4V7tk398S86bBfY4ssePRpqVHCAUPHzq_a9u-gN2ivpYsPaRpVXmlwk3rK-cfW9Bpx-IbtVFDUSm04SUuVF3WyYn6CJR4NMDE4lPjYa_jPkUesawyTXaP5z1TOch4T5BMwubTq8Jz4a2_lJ1_HQLnnCYxXyUT"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant truncate line-through">Spatial Audio Experiments</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-code-xs text-code-xs">
+                Archived
+              </span>
+</div>
+<span class="font-code-xs text-code-xs text-on-surface-variant truncate">Experimental WebAudio DSP nodes</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button aria-label="Delete Case Study Spatial Audio Experiments" class="h-8 w-8 rounded-lg bg-error-container text-on-error-container flex items-center justify-center hover:bg-error hover:text-on-error transition-all" id="triggerDeleteModal" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+<!-- Live Revision History Timeline -->
+<section class="px-margin mt-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Snapshot History</h3>
+<span class="font-code-xs text-code-xs text-primary">View Git Audit Log ↗</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-3">
+<div class="flex items-start gap-3">
+<span class="w-2 h-2 rounded-full bg-primary mt-1.5 shrink-0"></span>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface">Updated Kinetix OS metric copy</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">1 min ago</span>
+</div>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Local Staging Commit • Working Tree</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="w-2 h-2 rounded-full bg-outline-variant mt-1.5 shrink-0"></span>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface">Published Production Release v3.8</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Today, 09:42</span>
+</div>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Signed by Elena Vance • SHA #a9f02c4</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Critical Safeguard Deletion Modal Dialogue Sheet -->
+<aside aria-labelledby="modalTitle" aria-modal="true" class="fixed inset-0 z-50 flex items-center justify-center px-space-md bg-on-surface/40 backdrop-blur-xs transition-opacity" id="deleteModal" role="dialog">
+<div class="w-full max-w-md p-space-lg rounded-2xl bg-surface-container-lowest shadow-2xl flex flex-col gap-space-md transform scale-100 transition-transform">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h4 class="font-headline-sm text-headline-sm text-on-surface" id="modalTitle">Purge Case Study?</h4>
+<span class="font-code-xs text-code-xs text-error font-medium">Permanent Production Action</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Are you certain you wish to delete <span class="font-semibold text-on-surface">“Spatial Audio Experiments”</span>? This will expunge all associated metrics, public canonical routes, and CDN asset assets.
+      </p>
+<div class="p-3 rounded-lg bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">info</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">This operation cannot be reversed. A local fallback snapshot will be downloaded.</span>
+</div>
+<div class="flex items-center justify-end gap-2 pt-space-xs">
+<button class="h-10 px-4 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" id="cancelDeleteBtn" type="button">
+          Cancel
+        </button>
+<button class="h-10 px-4 rounded-lg bg-error text-on-error hover:bg-red-700 transition-colors shadow-sm font-label-md text-label-md flex items-center gap-1.5" id="confirmDeleteBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+<span>Confirm Deletion</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Sticky Bottom Autosave & Deployment Action Strip -->
+<div class="fixed bottom-16 left-0 right-0 z-40 px-margin pb-2 pointer-events-none">
+<div class="max-w-md mx-auto pointer-events-auto p-2 rounded-xl bg-inverse-surface/95 backdrop-blur-md shadow-xl flex items-center justify-between text-inverse-on-surface">
+<div class="flex items-center gap-2 pl-2">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="font-code-xs text-code-xs text-surface-container-high">Autosaved 1m ago</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="h-8 px-3 rounded-lg bg-surface-container-highest/20 hover:bg-surface-container-highest/30 text-surface-bright font-label-sm text-label-sm transition-all" type="button">
+          Save Draft
+        </button>
+<button class="h-8 px-3.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm shadow-md transition-all flex items-center gap-1 active:scale-95" type="button">
+<span class="material-symbols-outlined text-[16px]">publish</span>
+<span>Publish (3)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initDashboardInteractions() {
+    const deleteModal = document.getElementById('deleteModal');
+    const triggerDeleteModal = document.getElementById('triggerDeleteModal');
+    const cancelDeleteBtn = document.getElementById('cancelDeleteBtn');
+    const confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+
+    if (triggerDeleteModal && deleteModal) {
+      triggerDeleteModal.addEventListener('click', () => {
+        deleteModal.classList.remove('hidden');
+        deleteModal.classList.add('flex');
+      });
+    }
+
+    const closeModal = () => {
+      if (deleteModal) {
+        deleteModal.classList.add('hidden');
+        deleteModal.classList.remove('flex');
+      }
+    };
+
+    if (cancelDeleteBtn) {
+      cancelDeleteBtn.addEventListener('click', closeModal);
+    }
+
+    if (confirmDeleteBtn) {
+      confirmDeleteBtn.addEventListener('click', () => {
+        closeModal();
+      });
+    }
+
+    // Modal initial visual state: open as mockup demonstration
+    // User can dismiss with Cancel
+  })();
+</script><footer class="w-full px-margin py-space-lg flex flex-col items-center gap-space-md text-center bg-surface-container-low"><div class="flex items-center justify-center gap-space-md font-code-xs text-code-xs text-on-surface-variant"><a class="hover:text-primary transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center" href="#">GitHub</a><span class="text-outline-variant">·</span><a class="hover:text-primary transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center" href="#">Read.cv</a><span class="text-outline-variant">·</span><a class="hover:text-primary transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center" href="#">X / Tw</a><span class="text-outline-variant">·</span><a class="hover:text-primary transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center" href="#">LinkedIn</a></div><div class="flex items-center justify-between w-full max-w-sm px-space-xs"><span class="font-code-xs text-code-xs text-outline">© 2024 Elena Vance Studio</span><a class="font-code-xs text-code-xs text-outline hover:text-on-surface transition-colors min-h-[44px] flex items-center px-space-xs" data-path="private-sign-in" href="#">Site Admin ↗</a></div></footer></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-space-md"><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="work" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-sm text-label-sm">Work</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="contact" href="#"><span class="material-symbols-outlined text-[20px]">drafts</span><span class="font-label-sm text-label-sm">Contact</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] transition-colors gap-0.5 text-primary font-bold" data-path="content-management-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span><span class="font-label-sm text-label-sm">Console</span></a></div></nav></body></html>

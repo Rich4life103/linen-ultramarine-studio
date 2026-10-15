@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-primary-fixed text-on-primary-fixed;
+  }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    user-select: none;
+  }
+}
+
+@layer components {
+  /* Full-viewport gutters matching the design system margins */
+  .shell {
+    @apply mx-auto w-full max-w-5xl px-margin md:px-margin-tablet lg:px-margin-desktop;
+  }
+  .input-base {
+    @apply w-full rounded-lg border border-outline-variant/60 bg-surface-container-lowest px-3 py-2 font-sans text-body-sm text-on-surface shadow-xs outline-none transition-colors placeholder:text-outline focus:border-primary focus:ring-1 focus:ring-primary;
+  }
+  .label-caps {
+    @apply font-sans text-label-sm uppercase tracking-wider text-on-surface-variant;
+  }
+}
+
+/* Hide scrollbars on horizontal tab rails */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}

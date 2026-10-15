@@ -1,0 +1,17 @@
+# Normalise line endings in the repository. The app is authored on Windows but
+# built and deployed on Linux (Vercel, Render), so store text as LF everywhere.
+* text=auto eol=lf
+
+# Binary assets — never touch these
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.db binary
+*.zip binary
+
+# Let package managers keep their own formatting
+package-lock.json text eol=lf

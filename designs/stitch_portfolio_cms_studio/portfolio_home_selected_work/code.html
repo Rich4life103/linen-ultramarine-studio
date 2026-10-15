@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'surface-container-high': '#e9e7ec', 'on-tertiary': '#ffffff', 'on-error': '#ffffff', 'on-primary-fixed-variant': '#0039b5', 'inverse-primary': '#b7c4ff', 'error': '#ba1a1a', 'inverse-on-surface': '#f2f0f4', 'on-tertiary-fixed-variant': '#6e3900', 'primary-fixed-dim': '#b7c4ff', 'surface-tint': '#2151da', 'on-secondary-fixed-variant': '#822714', 'on-primary-fixed': '#001551', 'primary-fixed': '#dce1ff', 'on-surface-variant': '#434655', 'surface-container-lowest': '#ffffff', 'outline-variant': '#c4c5d7', 'secondary-fixed': '#ffdad2', 'on-tertiary-fixed': '#2f1500', 'tertiary-fixed': '#ffdcc3', 'on-error-container': '#93000a', 'tertiary-fixed-dim': '#ffb77d', 'primary': '#0037b0', 'on-background': '#1b1b1f', 'background': '#faf9fd', 'secondary-fixed-dim': '#ffb4a3', 'on-primary-container': '#cad3ff', 'surface-variant': '#e3e2e6', 'secondary': '#a13e28', 'on-secondary': '#ffffff', 'tertiary': '#6b3700', 'on-secondary-fixed': '#3d0600', 'inverse-surface': '#2f3034', 'surface-dim': '#dbd9dd', 'on-secondary-container': '#721c09', 'tertiary-container': '#8d4b00', 'on-tertiary-container': '#ffcba3', 'outline': '#747686', 'error-container': '#ffdad6', 'surface-container-low': '#f5f3f7', 'surface-container': '#efedf1', 'surface-bright': '#faf9fd', 'primary-container': '#1d4ed8', 'surface': '#faf9fd', 'on-primary': '#ffffff', 'secondary-container': '#fd8367', 'surface-container-highest': '#e3e2e6', 'on-surface': '#1b1b1f' }, borderRadius: { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, spacing: { 'space-3xl': '6rem', 'space-xl': '2.5rem', 'space-lg': '1.5rem', 'gutter-desktop': '2.5rem', 'space-sm': '0.5rem', 'margin-tablet': '2.5rem', 'space-xs': '0.25rem', 'margin': '1.25rem', 'space-2xl': '4rem', 'space-md': '1rem', 'margin-desktop': '4rem', 'gutter': '1.5rem' }, fontFamily: { 'display-hero': ['Newsreader'], 'body-md': ['Plus Jakarta Sans'], 'headline-md': ['Newsreader'], 'body-lg': ['Plus Jakarta Sans'], 'display-hero-mobile': ['Newsreader'], 'body-sm': ['Plus Jakarta Sans'], 'headline-lg': ['Newsreader'], 'code-xs': ['JetBrains Mono'], 'headline-md-mobile': ['Newsreader'], 'label-sm': ['Plus Jakarta Sans'], 'headline-lg-mobile': ['Newsreader'], 'label-md': ['Plus Jakarta Sans'], 'headline-sm': ['Newsreader'], 'code-sm': ['JetBrains Mono'] }, fontSize: { 'display-hero': ['4.5rem', { lineHeight: '5rem', letterSpacing: '-0.025em', fontWeight: '400' }], 'body-md': ['1rem', { lineHeight: '1.625rem', fontWeight: '400' }], 'headline-md': ['2rem', { lineHeight: '2.5rem', letterSpacing: '-0.015em', fontWeight: '400' }], 'body-lg': ['1.125rem', { lineHeight: '1.75rem', fontWeight: '400' }], 'display-hero-mobile': ['2.75rem', { lineHeight: '3.25rem', letterSpacing: '-0.02em', fontWeight: '400' }], 'body-sm': ['0.875rem', { lineHeight: '1.375rem', fontWeight: '400' }], 'headline-lg': ['2.75rem', { lineHeight: '3.25rem', letterSpacing: '-0.02em', fontWeight: '400' }], 'code-xs': ['0.6875rem', { lineHeight: '0.875rem', letterSpacing: '0.06em', fontWeight: '500' }], 'headline-md-mobile': ['1.5rem', { lineHeight: '2rem', letterSpacing: '-0.01em', fontWeight: '500' }], 'label-sm': ['0.75rem', { lineHeight: '1rem', letterSpacing: '0.02em', fontWeight: '600' }], 'headline-lg-mobile': ['2rem', { lineHeight: '2.5rem', letterSpacing: '-0.015em', fontWeight: '400' }], 'label-md': ['0.875rem', { lineHeight: '1.25rem', letterSpacing: '0.01em', fontWeight: '600' }], 'headline-sm': ['1.375rem', { lineHeight: '1.875rem', letterSpacing: '-0.01em', fontWeight: '500' }], 'code-sm': ['0.75rem', { lineHeight: '1rem', letterSpacing: '0.04em', fontWeight: '500' }] } } } };</script><style>@layer base { html, body { min-height: 100%; margin: 0; padding: 0; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } }</style></head><body class="bg-surface text-on-surface flex flex-col min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Elena Vance Monogram Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XpynGCkTaFnbid0m0WpkE2mjfFiizBHk00VA-efovvl3W91MVdhotkPRPLSaUBNRfB3QyBrnEb6OSs5l9CIn9SEoA2czMX68y8B6G1KdvEOON6TaGrNRKdKG0C8FjFCQL-eJDqSMSb_5B9jwGYSU2d6n4J_85q2Mfwmo4OC6wiaI-H_LsNEog4seqHgGur-7YhruQ0_BAI2AwUD4I_CC6ZR1orfdAaot5fxTTrT1GnyVXeNrdf92Jbru4"/><div class="flex flex-col truncate"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface truncate">Elena Vance</span><span class="font-code-xs text-code-xs text-on-surface-variant truncate uppercase tracking-wider">Design Technologist</span></div></div><div class="flex items-center gap-space-xs shrink-0"><div class="hidden xs:inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-code-xs text-code-xs"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span><span>Q3 Open</span></div><span class="text-xs font-label-sm text-on-surface-variant hidden">Work</span><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0 ring-1 ring-surface-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt35oXoPWrV4OP0j94YuxI-lhX5zvkUiJkCdsdqY0qJ-E1-h9CY4UlFBRfWDZ29Od__nJtt3tbxUvZgeH--DCmh2xtK2LhKzY8L5T6KRjr5Hi8iPY36Eh57t6LB9t4ADBPj2fG_dBdMywONEOMg0IetSw-llHhA_qFBBTJUCzJQc0Hvh32k2gSjFFRHgWA1iFBB351vOeX0bvt-zZTnjRcQl1Jcfnjsfrbx3ePugZuoYvzUwMZM4RW"/></div></div></header><main class="flex-1 w-full pt-16 pb-28 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Subtle Tonal Gradient Strip -->
+<div class="h-1.5 w-full bg-gradient-to-r from-primary via-surface-tint to-secondary-container opacity-90"></div>
+<!-- Editorial Hero Section -->
+<section class="px-margin pt-space-md pb-space-lg flex flex-col gap-space-md">
+<!-- Status Tag & Availability -->
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-on-surface text-code-xs font-code-xs tracking-wide">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
+</span>
+        Available for Select Projects (Q3/Q4)
+      </span>
+</div>
+<!-- Editorial Serif Main Statement -->
+<div class="flex flex-col gap-space-xs">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight leading-tight">
+        Crafting resilient design systems &amp; high-utility software interfaces.
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant pt-1 leading-relaxed">
+        Principal Product Designer &amp; Systems Architect with 9+ years operating at the rigorous convergence of developer tooling, fintech protocols, and spatial interfaces.
+      </p>
+</div>
+<!-- Editorial Portrait Card -->
+<div class="flex flex-col rounded-xl overflow-hidden bg-surface-container shadow-sm">
+<div class="relative w-full aspect-square overflow-hidden bg-surface-container-high">
+<img alt="Elena Vance — Principal Product Designer &amp; Systems Architect" class="w-full h-full object-cover grayscale-[15%] contrast-105 transition-all duration-700 hover:scale-[1.02]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt35oXoPWrV4OP0j94YuxI-lhX5zvkUiJkCdsdqY0qJ-E1-h9CY4UlFBRfWDZ29Od__nJtt3tbxUvZgeH--DCmh2xtK2LhKzY8L5T6KRjr5Hi8iPY36Eh57t6LB9t4ADBPj2fG_dBdMywONEOMg0IetSw-llHhA_qFBBTJUCzJQc0Hvh32k2gSjFFRHgWA1iFBB351vOeX0bvt-zZTnjRcQl1Jcfnjsfrbx3ePugZuoYvzUwMZM4RW"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white">
+<span class="font-code-xs text-code-xs tracking-wider uppercase backdrop-blur-md bg-black/30 px-2 py-1 rounded-lg">Studio Archival Plate No. 04</span>
+<span class="font-code-xs text-code-xs backdrop-blur-md bg-black/30 px-2 py-1 rounded-lg">2024 Index</span>
+</div>
+</div>
+<div class="p-3 flex items-center justify-between bg-surface-container-low text-on-surface-variant font-code-xs text-code-xs">
+<div class="flex items-center gap-1.5 truncate">
+<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+<span class="truncate text-on-surface font-medium">Elena Vance — Brooklyn, NY &amp; Remote</span>
+</div>
+<span class="text-outline uppercase tracking-wider text-[10px]">EST / UTC-5</span>
+</div>
+</div>
+<!-- Dual Actions -->
+<div class="flex flex-col gap-2.5 pt-1">
+<a class="w-full min-h-[48px] px-space-md py-3 bg-primary hover:bg-primary-container text-on-primary rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 shadow-sm active:scale-[0.99] transition-all" href="#featured-work">
+<span>Explore Selected Work</span>
+<span class="material-symbols-outlined text-[18px]">south</span>
+</a>
+<a class="w-full min-h-[48px] px-space-md py-3 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 shadow-sm active:scale-[0.99] transition-all" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary">description</span>
+<span>Download CV / Résumé</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant ml-0.5">PDF · 184KB</span>
+</a>
+</div>
+<!-- Quick Vital Statistics Rail -->
+<div class="grid grid-cols-3 gap-2 p-3 bg-surface-container-low rounded-xl">
+<div class="flex flex-col items-center text-center p-1">
+<span class="font-code-xs text-code-xs text-outline uppercase tracking-wider">Experience</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">9+ Yrs</span>
+<span class="font-code-xs text-[10px] text-on-surface-variant">Tier-1 Orgs</span>
+</div>
+<div class="flex flex-col items-center text-center p-1 bg-surface-container-lowest rounded-lg shadow-sm">
+<span class="font-code-xs text-code-xs text-primary uppercase tracking-wider">Patents &amp; OSS</span>
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">4 Rec</span>
+<span class="font-code-xs text-[10px] text-on-surface-variant">Systems In Prod</span>
+</div>
+<div class="flex flex-col items-center text-center p-1">
+<span class="font-code-xs text-code-xs text-outline uppercase tracking-wider">Scale Impact</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">$2.4B+</span>
+<span class="font-code-xs text-[10px] text-on-surface-variant">Flow Volume</span>
+</div>
+</div>
+</section>
+<!-- Featured Works Section -->
+<section class="px-margin py-space-md flex flex-col gap-space-md bg-surface-container-low" id="featured-work">
+<!-- Section Header -->
+<div class="flex items-end justify-between">
+<div class="flex flex-col gap-0.5">
+<span class="font-code-xs text-code-xs text-primary uppercase tracking-widest font-semibold">01 / Index of Works</span>
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-on-surface">Selected Case Studies</h2>
+</div>
+<span class="font-code-xs text-code-xs text-on-surface-variant">2022—2024</span>
+</div>
+<!-- Project Card 1: Kinetix OS -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+<div class="p-space-md pb-2 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-code-xs text-code-xs text-primary uppercase tracking-wider font-semibold">Flagship Project</span>
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 font-code-xs text-[11px] font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+            +42% task throughput
+          </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Kinetix OS</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Spatial canvas &amp; infinite-workspace window manager built for distributed engineering teams working across multi-modal interfaces.
+        </p>
+</div>
+<!-- Sleek Interface Mock Preview Block -->
+<div class="mx-space-md my-1 p-3 bg-surface-container-highest rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-surface-variant"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-surface-variant"></span>
+</div>
+<span class="font-code-xs text-[10px] text-on-surface-variant">viewport.render(spatial_node_7)</span>
+</div>
+<div class="grid grid-cols-3 gap-1.5 h-20">
+<div class="bg-primary/10 rounded p-1.5 flex flex-col justify-between">
+<span class="font-code-xs text-[9px] text-primary font-semibold">NODE A</span>
+<div class="w-full bg-primary/20 h-1 rounded"></div>
+<div class="w-2/3 bg-primary/20 h-1 rounded"></div>
+</div>
+<div class="col-span-2 bg-surface-container-lowest rounded p-2 flex flex-col justify-between shadow-xs">
+<div class="flex items-center justify-between">
+<span class="font-code-xs text-[9px] text-on-surface font-medium">CANVAS STREAM</span>
+<span class="font-code-xs text-[8px] text-emerald-700 bg-emerald-100 px-1 rounded">60 FPS</span>
+</div>
+<div class="flex items-end gap-1 h-6">
+<div class="w-1/6 bg-primary h-3 rounded-xs"></div>
+<div class="w-1/6 bg-primary h-5 rounded-xs"></div>
+<div class="w-1/6 bg-primary h-4 rounded-xs"></div>
+<div class="w-1/6 bg-primary h-6 rounded-xs"></div>
+<div class="w-1/6 bg-primary-container h-2 rounded-xs"></div>
+<div class="w-1/6 bg-primary h-5 rounded-xs"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-md pt-2 flex flex-col gap-3">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-code-xs text-code-xs">Systems Design</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-code-xs text-code-xs">Desktop / Web</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-code-xs text-code-xs">2024</span>
+</div>
+<div class="pt-2 flex items-center justify-between">
+<span class="font-code-xs text-code-xs text-on-surface-variant">Client: Confidential Spatial AI Lab</span>
+<a class="font-label-sm text-label-sm text-primary flex items-center gap-1 hover:underline min-h-[44px]" href="#">
+            Read Case Study <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Project Card 2: Aura Finance -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+<div class="p-space-md pb-2 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-code-xs text-code-xs text-secondary uppercase tracking-wider font-semibold">Institutional Fintech</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-code-xs text-[11px] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">payments</span>
+            $2.4B processed
+          </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Aura Finance</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Real-time algorithmic treasury and liquidity forecasting intelligence platform designed for decentralized protocol operations.
+        </p>
+</div>
+<!-- Algorithmic Preview Widget -->
+<div class="mx-space-md my-1 p-3 bg-surface-container rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-code-xs text-code-xs text-on-surface font-semibold">Liquidity Curve Optimization</span>
+<span class="font-code-xs text-[10px] text-primary font-bold">LIVE TELEMETRY</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-code-xs text-[10px] text-outline">NET CASH POOL</span>
+<p class="font-headline-sm text-headline-sm text-on-surface leading-none">$184.92M</p>
+</div>
+<span class="text-emerald-700 font-code-xs text-code-xs font-semibold">+8.4% 24h</span>
+</div>
+<!-- Sparkline SVG -->
+<div class="w-full h-8 pt-1">
+<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 280 40">
+<path d="M0 32 L40 26 L80 29 L120 18 L160 22 L200 12 L240 15 L280 4" stroke="#0037b0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M0 32 L40 26 L80 29 L120 18 L160 22 L200 12 L240 15 L280 4 L280 40 L0 40 Z" fill="url(#blue-grad)" opacity="0.15"></path>
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="blue-grad" x1="0" x2="0" y1="0" y2="40">
+<stop stop-color="#0037b0"></stop>
+<stop offset="1" stop-color="#ffffff" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+</div>
+<div class="p-space-md pt-2 flex flex-col gap-3">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-code-xs text-code-xs">Fintech</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-code-xs text-code-xs">Design Lead</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-code-xs text-code-xs">2023</span>
+</div>
+<div class="pt-2 flex items-center justify-between">
+<span class="font-code-xs text-code-xs text-on-surface-variant">Stewardship: End-to-End Execution</span>
+<a class="font-label-sm text-label-sm text-primary flex items-center gap-1 hover:underline min-h-[44px]" href="#">
+            Read Case Study <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Project Card 3: Prism Component Architecture -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+<div class="p-space-md pb-2 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-code-xs text-code-xs text-primary uppercase tracking-wider font-semibold">Open Architecture</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-code-xs text-[11px] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">layers</span>
+            64 Brands Supported
+          </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Prism Component Architecture</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Cross-platform multi-brand tokens and headless component library scaling across Web, iOS, and WebGL render targets with zero-runtime drift.
+        </p>
+</div>
+<!-- Token Representation Graphic -->
+<div class="mx-space-md my-1 p-3 bg-surface-container-high rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between font-code-xs text-[10px] text-on-surface-variant">
+<span>token.palette.semantic</span>
+<span class="text-primary">v3.4.1 [compiled]</span>
+</div>
+<div class="grid grid-cols-4 gap-1.5 text-center font-code-xs text-[9px]">
+<div class="bg-primary text-on-primary py-2 rounded-xs font-semibold">brand.blue</div>
+<div class="bg-secondary text-on-secondary py-2 rounded-xs font-semibold">accent.rust</div>
+<div class="bg-surface-dim text-on-surface py-2 rounded-xs font-semibold">mono.zinc</div>
+<div class="bg-inverse-surface text-inverse-on-surface py-2 rounded-xs font-semibold">dark.ink</div>
+</div>
+</div>
+<div class="p-space-md pt-2 flex flex-col gap-3">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-code-xs text-code-xs">Design Systems</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-code-xs text-code-xs">W3C Tokens</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-code-xs text-code-xs">Figma API</span>
+</div>
+<div class="pt-2 flex items-center justify-between">
+<span class="font-code-xs text-code-xs text-on-surface-variant">Adopted by 180+ Engineers</span>
+<a class="font-label-sm text-label-sm text-primary flex items-center gap-1 hover:underline min-h-[44px]" href="#">
+            Read Case Study <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Archive Link -->
+<div class="pt-2 flex justify-center">
+<a class="px-space-md py-3 bg-surface-container hover:bg-surface-container-high rounded-xl text-on-surface font-label-md text-label-md flex items-center gap-2 transition-all min-h-[48px]" href="#">
+<span>View all 12 projects in archival catalog</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Core Disciplines & Interactive Skills Matrix -->
+<section class="px-margin py-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-code-xs text-code-xs text-primary uppercase tracking-widest font-semibold">02 / Methodology</span>
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-on-surface">Core Disciplines &amp; Tooling</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        A balanced practice combining typographic precision, algorithmic systems thinking, and production-grade software craftsmanship.
+      </p>
+</div>
+<!-- Segmented Filter Tabs (Interactive Mock) -->
+<div class="flex p-1 bg-surface-container rounded-xl gap-1 overflow-x-auto" id="skills-tabs">
+<button class="skills-tab-btn flex-1 py-2 px-3 text-center rounded-lg bg-surface-container-lowest text-primary font-label-sm text-label-sm shadow-xs transition-all whitespace-nowrap" data-target="panel-design-systems">
+        Design Systems
+      </button>
+<button class="skills-tab-btn flex-1 py-2 px-3 text-center rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all whitespace-nowrap" data-target="panel-product-strategy">
+        Product Strategy
+      </button>
+<button class="skills-tab-btn flex-1 py-2 px-3 text-center rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all whitespace-nowrap" data-target="panel-prototyping">
+        Prototyping
+      </button>
+</div>
+<!-- Panel 1: Design Systems -->
+<div class="skills-panel flex flex-col gap-space-sm" id="panel-design-systems">
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Systemic Foundations</span>
+<span class="font-code-xs text-code-xs text-primary bg-primary-fixed px-2 py-0.5 rounded-full font-semibold">Core Expertise</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Architecting robust single-source-of-truth component graphs. From W3C standard tokens to headless primitives validated by strict visual regression suites.
+        </p>
+<!-- Skill Pills with Proficiency -->
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">token</span>
+<span class="font-label-sm text-label-sm text-on-surface">Token Architecture &amp; Style Dictionaries</span>
+</div>
+<span class="font-code-xs text-code-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Expert</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">draw</span>
+<span class="font-label-sm text-label-sm text-on-surface">Figma Advanced Variants &amp; Variables</span>
+</div>
+<span class="font-code-xs text-code-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Native</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">accessibility_new</span>
+<span class="font-label-sm text-label-sm text-on-surface">WCAG 2.2 AAA Accessibility Specs</span>
+</div>
+<span class="font-code-xs text-code-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Strict</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">code</span>
+<span class="font-label-sm text-label-sm text-on-surface">React / Tailwind / Headless UI</span>
+</div>
+<span class="font-code-xs text-code-xs font-semibold text-primary bg-primary-fixed px-2 py-0.5 rounded">Advanced</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Panel 2: Product Strategy (Hidden by default) -->
+<div class="skills-panel hidden flex-col gap-space-sm" id="panel-product-strategy">
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Product Strategy &amp; Discovery</span>
+<span class="font-code-xs text-code-xs text-secondary bg-secondary-fixed px-2 py-0.5 rounded-full font-semibold">Leadership</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Aligning user pain-points with commercial velocity. Transforming ambiguous zero-to-one problem spaces into modular, roadmap-ready technical milestones.
+        </p>
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">explore</span>
+<span class="font-label-sm text-label-sm text-on-surface">0-to-1 Product Definition</span>
+</div>
+<span class="font-code-xs text-code-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">High Impact</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">groups</span>
+<span class="font-label-sm text-label-sm text-on-surface">Qualitative &amp; Quantitative User Research</span>
+</div>
+<span class="font-code-xs text-code-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Fluent</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">analytics</span>
+<span class="font-label-sm text-label-sm text-on-surface">Data-Informed Experimentation</span>
+</div>
+<span class="font-code-xs text-code-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Rigorous</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Panel 3: Front-End Prototyping (Hidden by default) -->
+<div class="skills-panel hidden flex-col gap-space-sm" id="panel-prototyping">
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Front-End &amp; Interactive Code</span>
+<span class="font-code-xs text-code-xs text-primary bg-primary-fixed px-2 py-0.5 rounded-full font-semibold">Engineering</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Bridging design and engineering directly in the browser through functioning micro-frontends, stateful mockups, and performance benchmarks.
+        </p>
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">terminal</span>
+<span class="font-label-sm text-label-sm text-on-surface">TypeScript &amp; Component Storybooks</span>
+</div>
+<span class="font-code-xs text-code-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Proficient</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">speed</span>
+<span class="font-label-sm text-label-sm text-on-surface">Core Web Vitals Optimization</span>
+</div>
+<span class="font-code-xs text-code-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">98+ Score</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">animation</span>
+<span class="font-label-sm text-label-sm text-on-surface">Kinetic Micro-Interactions &amp; Shaders</span>
+</div>
+<span class="font-code-xs text-code-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Advanced</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience & Career Timeline -->
+<section class="px-margin py-space-md flex flex-col gap-space-md bg-surface-container-low">
+<div class="flex flex-col gap-0.5">
+<span class="font-code-xs text-code-xs text-primary uppercase tracking-widest font-semibold">03 / Trajectory</span>
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-on-surface">Career Timeline</h2>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Role 1 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-xs flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Staff Product Designer</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Vesper Labs</span>
+</div>
+<span class="font-code-xs text-code-xs text-on-surface-variant bg-surface-container px-2 py-1 rounded-full whitespace-nowrap">2022 — Present</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Leading design architecture for next-generation distributed computational canvas tools. Formulated the multi-tenant design token engine now utilized across 6 core applications.
+        </p>
+</div>
+<!-- Role 2 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-xs flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Senior Product Designer</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Stripe Ecosystem</span>
+</div>
+<span class="font-code-xs text-code-xs text-on-surface-variant bg-surface-container px-2 py-1 rounded-full whitespace-nowrap">2020 — 2022</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Spearheaded checkout customization flows and merchant analytics primitives. Streamlined merchant onboarding drop-off by 19% through progressive disclosure design patterns.
+        </p>
+</div>
+<!-- Role 3 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-xs flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Product Designer</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Studio Monolith</span>
+</div>
+<span class="font-code-xs text-code-xs text-on-surface-variant bg-surface-container px-2 py-1 rounded-full whitespace-nowrap">2018 — 2020</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Crafted bespoke brand identities and dynamic data visualization dashboards for early-stage fintech ventures and cultural institutions in New York.
+        </p>
+</div>
+</div>
+</section>
+<!-- Testimonials & Endorsements -->
+<section class="px-margin py-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-code-xs text-code-xs text-primary uppercase tracking-widest font-semibold">04 / Peer Reviews</span>
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-on-surface">Endorsements</h2>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Quote 1 -->
+<blockquote class="p-space-md bg-surface-container-high rounded-xl flex flex-col gap-3 relative overflow-hidden">
+<span class="material-symbols-outlined text-[32px] text-primary/30 select-none">format_quote</span>
+<p class="font-headline-sm text-[1.125rem] leading-snug text-on-surface italic">
+          “Elena operates with an exceptional balance of aesthetic intuition and engineering rigor. Her systems thinking didn’t just clean up our interface—it tripled the shipping cadence of our engineering squads.”
+        </p>
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Marcus Sterling</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">VP of Product, Vesper Labs</span>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-primary font-code-xs text-code-xs font-semibold">Verified Peer</span>
+</div>
+</blockquote>
+<!-- Quote 2 -->
+<blockquote class="p-space-md bg-surface-container-low rounded-xl flex flex-col gap-3 relative overflow-hidden">
+<span class="material-symbols-outlined text-[32px] text-primary/30 select-none">format_quote</span>
+<p class="font-headline-sm text-[1.125rem] leading-snug text-on-surface italic">
+          “Rarely do you meet a designer whose spec files read like immaculate architecture blueprints. Her clarity on edge states and accessibility is world-class.”
+        </p>
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Devin Zhao</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Director of Engineering, Studio Monolith</span>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface font-code-xs text-code-xs font-semibold">Collaborator</span>
+</div>
+</blockquote>
+</div>
+</section>
+<!-- Bottom Quick Contact & Download Trigger Callout -->
+<section class="mx-margin mb-space-lg p-space-md rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl flex flex-col gap-space-md">
+<div class="flex flex-col gap-1.5">
+<span class="font-code-xs text-code-xs text-inverse-primary uppercase tracking-widest font-semibold">Initiate Dialogue</span>
+<h3 class="font-headline-md-mobile text-headline-md-mobile text-inverse-on-surface">
+        Have an ambitious product challenge?
+      </h3>
+<p class="font-body-sm text-body-sm text-surface-variant leading-relaxed">
+        Currently taking on selective advisory roles, design systems leadership, and complex interface architecture projects for late 2024.
+      </p>
+</div>
+<!-- Direct Quick Actions -->
+<div class="flex flex-col gap-2.5">
+<a class="min-h-[48px] px-space-md py-3 bg-inverse-primary hover:bg-primary-fixed text-on-primary-fixed font-label-md text-label-md rounded-xl flex items-center justify-center gap-2 shadow-sm active:scale-[0.99] transition-all" href="mailto:elena@elenavance.design">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+<span>elena@elenavance.design</span>
+</a>
+<div class="flex items-center gap-2">
+<a class="flex-1 min-h-[44px] px-3 py-2 bg-surface-container-highest/20 hover:bg-surface-container-highest/30 text-inverse-on-surface font-code-xs text-code-xs rounded-lg flex items-center justify-center gap-1.5 transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Download Résumé</span>
+</a>
+<a class="flex-1 min-h-[44px] px-3 py-2 bg-surface-container-highest/20 hover:bg-surface-container-highest/30 text-inverse-on-surface font-code-xs text-code-xs rounded-lg flex items-center justify-center gap-1.5 transition-colors" data-path="contact" href="#">
+<span class="material-symbols-outlined text-[16px]">chat_bubble_outline</span>
+<span>Contact Page ↗</span>
+</a>
+</div>
+</div>
+<div class="flex items-center justify-between text-outline-variant font-code-xs text-[11px] pt-1 border-t border-white/10">
+<span>GPG Key: 4FA1 829C 9B30</span>
+<span>Encrypted Correspondence Welcome</span>
+</div>
+</section>
+<!-- Interactive script for tabs -->
+<script>
+    (function initSkillsTabs() {
+      const tabs = document.querySelectorAll('.skills-tab-btn');
+      const panels = document.querySelectorAll('.skills-panel');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const targetId = tab.getAttribute('data-target');
+
+          // Reset tabs styling
+          tabs.forEach(t => {
+            t.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-xs');
+            t.classList.add('text-on-surface-variant');
+          });
+
+          // Set active tab styling
+          tab.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-xs');
+          tab.classList.remove('text-on-surface-variant');
+
+          // Toggle panels
+          panels.forEach(p => {
+            if (p.id === targetId) {
+              p.classList.remove('hidden');
+              p.classList.add('flex');
+            } else {
+              p.classList.add('hidden');
+              p.classList.remove('flex');
+            }
+          });
+        });
+      });
+    })();
+  </script>
+</div><footer class="w-full px-margin py-space-lg flex flex-col items-center gap-space-md text-center bg-surface-container-low"><div class="flex items-center justify-center gap-space-md font-code-xs text-code-xs text-on-surface-variant"><a class="hover:text-primary transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center" href="#">GitHub</a><span class="text-outline-variant">·</span><a class="hover:text-primary transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center" href="#">Read.cv</a><span class="text-outline-variant">·</span><a class="hover:text-primary transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center" href="#">X / Tw</a><span class="text-outline-variant">·</span><a class="hover:text-primary transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center" href="#">LinkedIn</a></div><div class="flex items-center justify-between w-full max-w-sm px-space-xs"><span class="font-code-xs text-code-xs text-outline">© 2024 Elena Vance Studio</span><a class="font-code-xs text-code-xs text-outline hover:text-on-surface transition-colors min-h-[44px] flex items-center px-space-xs" data-path="private-sign-in" href="#">Site Admin ↗</a></div></footer></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-space-md"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] transition-colors gap-0.5 text-primary font-bold" data-path="work" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-sm text-label-sm">Work</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="contact" href="#"><span class="material-symbols-outlined text-[20px]">drafts</span><span class="font-label-sm text-label-sm">Contact</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="content-management-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span><span class="font-label-sm text-label-sm">Console</span></a></div></nav></body></html>
